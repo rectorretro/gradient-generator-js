@@ -1,5 +1,3 @@
-import Swal from 'sweetalert2';
-
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'normalize.css/normalize.css'
 
@@ -9,20 +7,16 @@ import { setGradient,setOrientation } from './helpers';
 import { changeOrientation } from './orientation';
 
 
+const body = document.querySelector('body');
 const firstColorInput = document.getElementById('firstcolor') as HTMLInputElement;
 const secondColorInput = document.getElementById('secondcolor') as HTMLInputElement;
-const body = document.querySelector('body');
+
 
 const clipBoardButton = document.getElementById('btncopy') as HTMLButtonElement;
-const orientationButtons = document.querySelectorAll('.btnOrientation');
 
 let orientation_1 = "to right";
 
-clipBoardButton.addEventListener("click",() => changeOrientation({first: firstColorInput, second: secondColorInput},orientation_1))
-
-
-
-
+const orientationButtons = document.querySelectorAll('.btnOrientation');
 
 
 orientationButtons.forEach((button)=>{
@@ -36,15 +30,15 @@ orientationButtons.forEach((button)=>{
             {first: firstColorInput,
              second: secondColorInput
             });
+            //console.log(currentButton.dataset.value)
+            orientation_1 = ""+currentButton.dataset.value;
     }
 
     );
+    
 })
 
-//topButton.addEventListener("click",()=>{
- //   setOrientation("to top",topButton);
-//})
-
+clipBoardButton.addEventListener("click",() => changeOrientation({first: firstColorInput, second: secondColorInput},orientation_1))
 
 
 firstColorInput.addEventListener("input",(event)=>{
@@ -59,4 +53,4 @@ secondColorInput.addEventListener("input",(event)=>{
     //console.log(input.value);
 });
 
-console.log(firstColorInput.value);
+//console.log(firstColorInput.value);

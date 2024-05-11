@@ -18,7 +18,7 @@ export const changeOrientation = async(inputs: HTMLInputs,orientation:string)=>{
     await navigator.clipboard.writeText(gradient);
 
     Swal.fire({
-        title: "Succress",
+        title: "Success",
         text: "Gradien Copy to clipboard",
         icon: "success",
         toast: true,
@@ -26,6 +26,6 @@ export const changeOrientation = async(inputs: HTMLInputs,orientation:string)=>{
         timer: 3000,
         timerProgressBar: true
     });
+    console.log(gradient)
     
-    //console.log(gradient);
 }

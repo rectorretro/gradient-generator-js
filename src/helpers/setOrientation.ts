@@ -2,14 +2,16 @@ import { HTMLInputs } from "../interfaces";
 import { setGradient } from "./setGradient";
 
 export const setOrientation = (
-    orientation_1: string,
+    orientation: string,
     newOrientation: string, 
     buttonElement: HTMLButtonElement,
     inputs: HTMLInputs
 )=>{
 
     const body = document.querySelector('body');
-    orientation_1 = newOrientation;
+    //console.log("antes de cambio"+orientation)
+    orientation = newOrientation;
+    //console.log("después del cambio" +orientation)
     const activeButton = document.querySelectorAll(".active");
     activeButton.forEach((button)=>{
         button.classList.remove("active")
@@ -25,6 +27,6 @@ export const setOrientation = (
     body!.style.background = setGradient(
         inputs.first.value,
         inputs.second.value,
-        orientation_1);
+        orientation);
 
 }
