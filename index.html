@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        
+      <h1>Gradient Generator</h1>
+      <div class="color-inputs">
+          <input type="color" id="firstcolor">
+          <input type="color" id="secondcolor">
+      </div>
+      <div class="gradient-orientation">
+        <button data-value="to top" class="btnOrientation active">
+          <i class="bi bi-arrow-up-circle-fill"></i>
+        </button>
+
+        <button data-value="to bottom" class="btnOrientation">
+          <i class="bi bi-arrow-down-circle-fill"></i>
+        </button>
+
+        <button data-value="to left" class="btnOrientation">
+          <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+
+        <button data-value="to right" class="btnOrientation">
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+
+        <button data-value="45deg" class="btnOrientation">
+          <i class="bi bi-arrow-up-left-circle-fill"></i>
+        </button>
+        
+        <button data-value="135deg" class="btnOrientation">
+          <i class="bi bi-arrow-up-right-circle-fill"></i>
+        </button>
+        
+        <button data-value="225deg" class="btnOrientation">
+          <i class="bi bi-arrow-down-right-circle-fill"></i>
+        </button>
+
+        <button data-value="315deg" class="btnOrientation">
+          <i class="bi bi-arrow-down-left-circle-fill"></i>
+        </button>
+
+        
+
+
+        
+        
+        
+
+      </div>
+      <div class="gradient-text">
+        <p id="text">Linear-gradient(to right, #ff0000, #ff6347)</p>
+
+        <button class="btncopy" id="btncopy">
+          <i class="bi bi-clipboard-fill"></i>
+        </button>
+      </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
